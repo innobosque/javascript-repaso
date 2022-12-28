@@ -1,14 +1,7 @@
+/**
+ * Calcular perímetro de un cuadrado
+ */
 const btn1 = document.getElementById("b_ej1"); //objeto
-
-//dispatch //event
-
-// function calcularPerimetro(){}
-
-
-
-
-
-
 
 
 
@@ -27,11 +20,8 @@ const calcularPerimetro = (a) => {
     r1.textContent = mensaje;
     
 }
+
 btn1.onclick = calcularPerimetro;
-
-
-
-
 
 
 /*
@@ -44,13 +34,11 @@ const calcularAreaTriangulo= (base,altura) => {
     return resultado; 
 }
 
-
-
-
-
 const btn2 = document.querySelector("#b_ej2");
 //Capturo el envento del botón click o cuando pulso el botón
 btn2.onclick =  () => {
+
+    //Vigilamos si pulso cancelar
     const longitud = prompt("Dame una longitud");
     if(longitud===null){
         return;
@@ -61,8 +49,7 @@ btn2.onclick =  () => {
         return;
     }
 
-    //longitud y base tienen string
-    //Voy a comprobar si el string es número
+    //Valido que las entradas del prompt sean números si no cancelo
     if(isNaN(longitud)){
         alert(`Formato numérico no válido [${longitud}]`)
         return;
@@ -73,7 +60,7 @@ btn2.onclick =  () => {
         return;
     }
 
-    //A partir de aquí tengo dos números si o si
+    //Resuelvo
     let long = Number(longitud);
     let b = Number(base);
 
@@ -81,12 +68,5 @@ btn2.onclick =  () => {
 
     const resEl = document.getElementById("r_ej2");
 
-    resEl.innerHTML = `<div>${base}*${longitud}/2=<strong>${miResultado}</strong></div>`;
-
-
-
-    
+    resEl.innerHTML = `<div>${base}*${longitud}/2=<strong>${miResultado}</strong></div>`;    
 }
-
-
-
